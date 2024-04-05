@@ -13,9 +13,9 @@
            <h1>Exam Form
                <span class="title_small"></span>
            </h1>
-           <form action="">
+           <form method="post" action="{% url 'page_one' %}">
             {% csrf_token %}
-               <div class="form_container">
+            <div class="form_container">
                    <div class="form_control">
                        <label for="first_name">First Name</label>
                        <input type="text" name="first_name" id="first_name" 
