@@ -5,6 +5,8 @@ from .models import *
 
 admin.site.register(Category)
 
-admin.site.register(Category1)
+admin.site.register(StateData)
 
-admin.site.register(Category2)
+admin.site.register(StateData1)
+
+admin.site.register(StateData2)
