@@ -8,7 +8,7 @@ def page_one(request):
         category, created = Category.objects.get_or_create(name=category_name)
 
         if category_name == 'Uttar_Pradesh':
-            StateData1.objects.create(
+            Category1.objects.create(
                 category=category,
                 field1=request.POST.get('first_name'),
                 field2=request.POST.get('marks')
@@ -20,13 +20,13 @@ def page_one(request):
                 field2=request.POST.get('marks_in_percentage')
             )
         elif category_name == 'Karnataka':
-            StateData3.objects.create(
+            Category2.objects.create(
                 category=category,
                 field1=request.POST.get('email'),
                 field2=request.POST.get('date')
             )
         elif category_name == 'Madhya_Pradesh':
-            StateData3.objects.create(
+            Category3.objects.create(
                 category=category,
                 field1=request.POST.get('email'),
                 field2=request.POST.get('date')
