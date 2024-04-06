@@ -1,7 +1,18 @@
 from django.db import models
 
 class Category(models.Model):
-    name = models.CharField(max_length=100)
+    # Define choices for different boards
+    ICSE = 'ICSE'
+    CBSE = 'CBSE'
+    STATE_BOARD = 'State Board'
+
+    BOARD_CHOICES = [
+        (ICSE, 'ICSE'),
+        (CBSE, 'CBSE'),
+        (STATE_BOARD, 'State Board'),
+    ]
+
+    name = models.CharField(max_length=100, choices=BOARD_CHOICES)
 
 class StateData(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
